@@ -28,6 +28,9 @@ class Division: ObservableObject {
         return division
     }
     
-    static let examples = [Division.createDivision(code: "vBY-1", of: 10), Division.createDivision(code: "vCX-1", of: 9), Division.createDivision(code: "vE5-1", of: 8)]
+    static let examples = [Division.createDivision(code: "vBY-1", of: 10),
+                           Division.createDivision(code: "vCX-1", of: 9),
+                           Division.createDivision(code: "vE5-1", of: 8),
+                           Division.createDivision(code: "CMsiX-1", of: 6)]
     #endif
 }
