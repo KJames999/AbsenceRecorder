@@ -24,6 +24,17 @@ class Division: ObservableObject {
         }
     }
     
+    func createAbsenceOrGetExistingIfAvailable(for date: Date) -> Absence {
+        if let existingAbsence = getAbsence(for: date) {
+            return existingAbsence
+        } else {
+            let absence = Absence(date: date, students: students)
+            absences.append(absence)
+            
+            return absence
+        }
+    }
+    
     #if DEBUG
     static func createDivision(code: String, of size: Int) -> Division {
         let division = Division(code: code)
