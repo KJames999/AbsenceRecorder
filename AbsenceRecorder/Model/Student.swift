@@ -7,7 +7,7 @@
 
 import Foundation
 
-class Student: ObservableObject {
+class Student: Codable {
     let forename: String
     let surname: String
     let birthday: Date

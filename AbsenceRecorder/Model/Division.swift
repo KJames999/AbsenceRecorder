@@ -8,7 +8,7 @@
 import Foundation
 import SwiftUI
 
-class Division: ObservableObject {
+class Division: Codable {
     let code: String
     var students: [Student] = []
     var absences: [Absence] = []
