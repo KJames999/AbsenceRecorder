@@ -11,7 +11,7 @@ struct AttendanceView: View {
     @EnvironmentObject var state: StateController
     
     var body: some View {
-        Text("Attendance View")
+        Text("Attendance: \(state.divisions[0].code)")
     }
 }
 

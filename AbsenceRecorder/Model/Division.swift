@@ -11,9 +11,17 @@ import SwiftUI
 class Division: ObservableObject {
     let code: String
     var students: [Student] = []
+    var absences: [Absence] = []
     
     init(code: String) {
         self.code = code
+    }
+    
+    func getAbsence(for date: Date) -> Absence? {
+        return absences.first {
+            let comparison = Calendar.current.compare($0.takenOn, to: date, toGranularity: .day)
+            return comparison == .orderedSame
+        }
     }
     
     #if DEBUG
